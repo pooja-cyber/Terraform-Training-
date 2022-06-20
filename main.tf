@@ -1,4 +1,4 @@
-r//
+//EC2setup
 resource "aws_instance" "ec2-web" {
   ami           = "ami-079b5e5b3971bd10d"
   instance_type = "t2.micro"
@@ -9,7 +9,7 @@ resource "aws_instance" "ec2-web" {
 }
 //
 
-//
+//SecurityGroup with webserver
 resource "aws_security_group" "instance" {
   name = "terraform-sg"
 
@@ -52,7 +52,7 @@ EOF
   }
 }
 
-//
+//CustomVPC
 
 
 resource "aws_security_group" "sg1" {
