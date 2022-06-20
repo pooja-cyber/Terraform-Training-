@@ -11,7 +11,7 @@ user_data = <<-EOF
   DEBIAN_FRONTEND=noninteractive /usr/bin/apt-get upgrade -yq
   /usr/bin/apt-get install apache2 -y
   /usr/sbin/ufw allow in "Apache Full"
-  /bin/echo "Hello world " >/var/www/html/index.html
+  /bin/echo "Hello Bosch " >/var/www/html/index.html
   instance_ip=`curl http://169.254.169.254/latest/meta-data/public-ipv4`
   echo $instance_ip >>/var/www/html/index.html
   EOF
